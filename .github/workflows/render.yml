@@ -1,8 +1,12 @@
 name: Render README.md
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
   repository_dispatch:
-    types: [blog-updated]
+    types:
+      - blog-updated
+  workflow_dispatch:
 
 jobs:
   render-readme:
