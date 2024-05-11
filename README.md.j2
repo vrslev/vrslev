@@ -1,0 +1,7 @@
+It's me!
+
+---
+Latest posts on my blog:
+{% for post in rss.channel.item[:10] +%}
+- [{{ post.title }}]({{ post.link }}) ({{ post.pubDate }})
+{%- endfor -%}
