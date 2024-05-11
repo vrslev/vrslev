@@ -2,6 +2,7 @@ name: Render README.md
 on:
   workflow_dispatch:
   repository_dispatch:
+    types: [blog-updated]
 
 jobs:
   render-readme:
