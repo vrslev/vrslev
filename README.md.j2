@@ -1,4 +1,4 @@
-It's me!
+Mostly writing Python code.
 
 ---
 Latest posts on my blog:
