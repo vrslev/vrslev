@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v3
       - uses: taiki-e/install-action@v2
-      - run: mise run build-readme
+      - run: mise run render-readme
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Render README.md
