@@ -15,14 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v3
       - uses: taiki-e/install-action@v2
-        with:
-          tool: minijinja-cli@2.0
-      - run: |
-          curl -sSfL https://vrslev.com/index.xml \
-          | yq --input-format xml --output-format yaml \
-            '.rss.channel.item[].pubDate |= with_dtf("Mon, 02 Jan 2006 15:04:05 -0700"; format_datetime("2 January 2006"))' \
-          | minijinja-cli README.md.j2 - --format yaml --strict -o README.md
+      - run: mise run build-readme
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Render README.md

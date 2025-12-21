@@ -1,4 +1,4 @@
-[tasks.readme]
+[tasks.build-readme]
 tools."ubi:mitsuhiko/minijinja" = "latest"
 tools.yq = "latest"
 usage = '''
