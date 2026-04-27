@@ -1,5 +1,5 @@
 [tasks.render-readme]
-tools."ubi:mitsuhiko/minijinja" = "latest"
+tools."github:mitsuhiko/minijinja" = "latest"
 tools.yq = "latest"
 usage = '''
 arg "<blog_rss_url>" default="https://vrslev.com/rss.xml"
